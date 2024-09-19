@@ -1,0 +1,130 @@
+:root {
+  --background-color: #f2f5f9;
+  --text-color: #333333;
+  --header-bg-color: #4a90e2;
+  --button-bg-color: #4a90e2;
+  --button-text-color: #ffffff;
+  --high-priority-color: #e74c3c;
+  --medium-priority-color: #f39c12;
+  --low-priority-color: #2ecc71;
+  --completed-task-bg-color: #d3d3d3;
+}
+
+.dark {
+  --background-color: #1e1e1e;
+  --text-color: #f5f5f5;
+  --header-bg-color: #34495e;
+  --button-bg-color: #3498db;
+  --button-text-color: #ffffff;
+  --high-priority-color: #e74c3c;
+  --medium-priority-color: #f1c40f;
+  --low-priority-color: #2ecc71;
+  --completed-task-bg-color: #555555;
+}
+
+
+.App {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-bg-color);
+  padding: 10px;
+  color: white;
+}
+
+.add-button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filter {
+  cursor: pointer;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select,
+.task-form button {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.task-form button {
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s, text-decoration 0.3s;
+}
+
+.task-title {
+  flex-grow: 1;
+}
+
+.task-priority,
+.task-due-date {
+  margin-left: 10px;
+}
+
+.task.high {
+  border-left: 5px solid var(--high-priority-color);
+}
+
+.task.medium {
+  border-left: 5px solid var(--medium-priority-color);
+}
+
+.task.low {
+  border-left: 5px solid var(--low-priority-color);
+}
+
+.task.completed {
+  text-decoration: line-through;
+  background-color: var(--completed-task-bg-color);
+}
+
+.task button {
+  padding: 5px 10px;
+}
+
+input,
+select,
+button {
+  margin: 5px;
+  width: 100%;
+}
